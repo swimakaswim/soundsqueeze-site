@@ -294,6 +294,10 @@ body{height:100%;font-family:'General Sans',sans-serif;background:var(--bk);colo
   0%,100%{transform:scale(1)}
   50%{transform:scale(1.03)}
 }
+@keyframes ftBadgeBreathe{
+  0%,100%{transform:translate(-50%,-50%) scale(1)}
+  50%{transform:translate(-50%,-50%) scale(1.03)}
+}
 
 /* ---- LAYOUT ---- */
 .about-inner{
@@ -656,7 +660,7 @@ body{height:100%;font-family:'General Sans',sans-serif;background:var(--bk);colo
   opacity:0;
   transition:all .7s var(--ease) .15s;
 }
-.s-freetime.in .ft-badge{opacity:1;animation:badgeBreathe 6s ease-in-out infinite 1.2s}
+.s-freetime.in .ft-badge{opacity:1;animation:ftBadgeBreathe 6s ease-in-out infinite 1.2s}
 .ft-badge-text{
   font-family:'Agrandir Grand',sans-serif;
   font-weight:900;font-size:1.15rem;line-height:1.3;
