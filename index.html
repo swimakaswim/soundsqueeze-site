@@ -57,9 +57,12 @@ body{height:100%;font-family:'General Sans',sans-serif;background:var(--bk);colo
 /* ================================ */
 /* SIDE NAV — Table of Contents      */
 /* ================================ */
+.side-nav.visible{opacity:1;pointer-events:auto}
 .side-nav{
   position:fixed;right:12px;top:50%;transform:translateY(-50%);
   z-index:100;
+  opacity:0;transition:opacity .4s ease;
+  pointer-events:none;
   display:flex;flex-direction:column;align-items:flex-end;
   gap:0;
 }
@@ -1259,11 +1262,11 @@ a.crew-link *{text-decoration:none}
         </div>
       </div>
       <div class="exp-ov-slide" data-idx="7" data-video="true">
-        <video src="ss-flow-theory1.mp4" playsinline muted preload="auto"></video>
+        <video src="ss-flow-theory1.mp4" playsinline muted preload="auto" style="object-fit:contain"></video>
         <button class="exp-ov-mute" onclick="expToggleMuteForSlide(event)">&#128263;</button>
       </div>
       <div class="exp-ov-slide" data-idx="8" data-video="true">
-        <video src="ss-flow-theory2.mp4" playsinline muted preload="auto"></video>
+        <video src="ss-flow-theory2.mp4" playsinline muted preload="auto" style="object-fit:contain"></video>
         <button class="exp-ov-mute" onclick="expToggleMuteForSlide(event)">&#128263;</button>
       </div>
       <div class="exp-ov-slide" data-idx="9" data-video="true">
@@ -1567,12 +1570,18 @@ const navItems = document.querySelectorAll('.sn-item');
 const swipeHint = document.getElementById('swipeHint');
 let current = 0;
 
+let navTimer=null;
 function syncNav(idx) {
   if (idx === current && idx !== 0) return;
   current = idx;
   navItems.forEach((n, i) => n.classList.toggle('on', i === idx));
   // Hide swipe hint after first scroll
   if (idx > 0) swipeHint.classList.add('hide');
+  // Show nav temporarily
+  const nav=document.getElementById('sideNav');
+  nav.classList.add('visible');
+  clearTimeout(navTimer);
+  navTimer=setTimeout(()=>nav.classList.remove('visible'),2000);
 }
 
 // Nav index -> section DOM index (skip Free Time)
@@ -1783,6 +1792,7 @@ function expShowSlide(idx){
 
 function expOpenStory(){
   expState='IDLE';
+  document.getElementById('sideNav').style.display='none';
   expUnmuted=false;
   // Reset overlay position for entry animation
   expOverlay.style.opacity='0';
@@ -1816,6 +1826,7 @@ function expDismiss(){
     if(settled)return;settled=true;
     expOverlay.classList.remove('show');
     expOverlay.style.transform='';expOverlay.style.opacity='';
+    document.getElementById('sideNav').style.display='';
   }
   expOverlay.addEventListener('transitionend',function h(e){
     if(e.target===expOverlay){expOverlay.removeEventListener('transitionend',h);settle();}
