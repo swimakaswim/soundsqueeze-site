@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Apply — Sound Squeeze — Creative Retreat for Recording Musicians</title>
+<meta name="description" content="Apply for Sound Squeeze 2.0 — A creative retreat for recording musicians. Mar 29 - Apr 2, 2026. Hill Country, TX.">
+<meta property="og:title" content="Sound Squeeze — Creative Retreat for Recording Musicians">
+<meta property="og:description" content="A 4-night creative retreat for recording musicians. Mar 29 - Apr 2, 2026. Hill Country, TX.">
+<meta property="og:image" content="https://swim.art/images/soundsqueeze-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://swim.art/SS">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sound Squeeze — Creative Retreat for Recording Musicians">
+<meta name="twitter:description" content="A 4-night creative retreat for recording musicians. Mar 29 - Apr 2, 2026. Hill Country, TX.">
+<meta name="twitter:image" content="https://swim.art/images/soundsqueeze-og.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800,900&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --g:#1A4D1E;--c:#F5F0E0;--w:#fff;--bk:#0a0a0a;
+  --ease:cubic-bezier(.4,0,.2,1);
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'General Sans',sans-serif;
+  background:var(--bk);color:var(--w);
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+}
+
+/* Grain overlay */
+.grain{position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:128px}
+
+/* ================================ */
+/* HEADER                            */
+/* ================================ */
+.header{
+  padding:2.5rem 1.5rem 1.5rem;
+  text-align:center;
+  position:relative;
+}
+.header-back{
+  position:absolute;top:2.5rem;left:1.5rem;
+  font-family:'Space Mono',monospace;
+  font-size:.75rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:#fff;
+  text-decoration:none;
+  transition:color .2s;
+}
+.header-back:hover{color:var(--c)}
+.header-title{
+  font-family:'Cabinet Grotesk',sans-serif;
+  font-weight:900;font-size:2rem;
+  letter-spacing:-.03em;
+  color:#fff;
+  line-height:1.1;
+}
+.header-sub{
+  font-family:'Space Mono',monospace;
+  font-size:.7rem;font-weight:700;
+  letter-spacing:.15em;text-transform:uppercase;
+  color:#fff;
+  margin-top:.5rem;
+}
+
+/* ================================ */
+/* SECTION STYLES                    */
+/* ================================ */
+.apply-section{
+  padding:2rem 1.5rem;
+  max-width:480px;
+  margin:0 auto;
+}
+.sec-divider{
+  width:40px;height:1px;
+  background:rgba(255,255,255,.08);
+  margin:0 auto;
+}
+.sec-title{
+  font-family:'Cabinet Grotesk',sans-serif;
+  font-weight:900;font-size:1.4rem;
+  letter-spacing:-.02em;
+  color:#fff;
+  text-align:center;
+  margin-bottom:1.5rem;
+}
+.sec-title-sm{
+  font-family:'Space Mono',monospace;
+  font-size:.65rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:#fff;
+  text-align:center;
+  margin-bottom:.6rem;
+}
+
+/* ================================ */
+/* HOW IT WORKS                      */
+/* ================================ */
+.steps{
+  display:flex;flex-direction:column;
+  gap:0;
+  position:relative;
+}
+.steps::before{
+  content:'';position:absolute;
+  left:15px;top:24px;bottom:24px;
+  width:1px;
+  background:linear-gradient(to bottom, rgba(26,77,30,.6), rgba(26,77,30,.15));
+}
+.step{
+  display:flex;gap:1.2rem;
+  padding:.8rem 0;
+  position:relative;
+}
+.step-num{
+  width:30px;height:30px;
+  border-radius:50%;
+  background:var(--g);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Space Mono',monospace;
+  font-size:.65rem;font-weight:700;
+  color:var(--c);
+  flex-shrink:0;
+  position:relative;z-index:1;
+}
+.step-content{flex:1;padding-top:.25rem}
+.step-title{
+  font-family:'Cabinet Grotesk',sans-serif;
+  font-weight:800;font-size:1.1rem;
+  color:#fff;
+  line-height:1.2;
+}
+.step-desc{
+  font-family:'General Sans',sans-serif;
+  font-size:.9rem;line-height:1.5;
+  color:#fff;
+  margin-top:.25rem;
+}
+
+/* ================================ */
+/* TYPEFORM EMBED                    */
+/* ================================ */
+.typeform-section{
+  padding:1rem 0 0;
+  max-width:100%;
+}
+.typeform-wrap{
+  width:100%;
+  height:calc(100vh - 80px);
+  min-height:500px;
+  max-height:800px;
+  border-radius:16px;
+  overflow:hidden;
+  margin:0 auto;
+  max-width:480px;
+  padding:0 1rem;
+}
+.typeform-wrap iframe{
+  width:100%;height:100%;
+  border:none;border-radius:16px;
+}
+.typeform-or{
+  text-align:center;
+  padding:1.5rem 0 0;
+}
+.typeform-or-text{
+  font-family:'Space Mono',monospace;
+  font-size:.65rem;font-weight:400;
+  letter-spacing:.1em;
+  color:#fff;
+}
+.typeform-or a{
+  color:var(--c);text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+/* ================================ */
+/* PRICING DETAILS                   */
+/* ================================ */
+.pricing-section{
+  background:var(--g);
+  padding:2.5rem 1.5rem;
+  margin-top:1rem;
+}
+.pricing-inner{
+  max-width:420px;margin:0 auto;
+}
+.pricing-block{
+  padding:1.1rem 0;
+  border-bottom:1px solid rgba(245,240,224,.1);
+}
+.pricing-block:last-child{border-bottom:none}
+.pricing-block-name{
+  font-family:'Cabinet Grotesk',sans-serif;
+  font-weight:800;font-size:1.3rem;
+  color:var(--c);line-height:1.1;
+}
+.pricing-block-sub{
+  font-family:'General Sans',sans-serif;
+  font-size:.8rem;
+  color:var(--c);
+  margin-top:.15rem;font-style:italic;
+}
+.pricing-line{
+  display:flex;align-items:baseline;justify-content:space-between;
+  margin-top:.5rem;
+}
+.pricing-line-label{
+  font-family:'General Sans',sans-serif;
+  font-size:.9rem;
+  color:var(--c);
+}
+.pricing-line-price{
+  font-family:'Space Mono',monospace;
+  font-weight:700;font-size:1.15rem;
+  color:var(--c);
+  letter-spacing:-.02em;
+}
+.pricing-block-desc{
+  font-family:'General Sans',sans-serif;
+  font-size:.85rem;line-height:1.5;
+  color:var(--c);
+  margin-top:.4rem;
+}
+.pricing-block-note{
+  font-family:'Space Mono',monospace;
+  font-size:.7rem;
+  color:var(--c);
+  margin-top:.25rem;font-style:italic;
+}
+.pricing-vehicle{
+  padding:1.1rem 0 0;
+}
+.pricing-vehicle-title{
+  font-family:'Cabinet Grotesk',sans-serif;
+  font-weight:800;font-size:1.1rem;
+  color:var(--c);
+}
+.pricing-vehicle-desc{
+  font-family:'General Sans',sans-serif;
+  font-size:.85rem;line-height:1.5;
+  color:var(--c);
+  margin-top:.2rem;
+}
+
+/* Includes box */
+.includes-box{
+  margin-top:1.5rem;
+  padding:1.2rem;
+  border:1px solid rgba(245,240,224,.1);
+  border-radius:12px;
+}
+.includes-title{
+  font-family:'Space Mono',monospace;
+  font-size:.7rem;font-weight:700;
+  letter-spacing:.15em;text-transform:uppercase;
+  color:var(--c);
+  margin-bottom:.7rem;
+}
+.includes-list{
+  list-style:none;
+  display:flex;flex-direction:column;
+  gap:.4rem;
+}
+.includes-list li{
+  font-family:'General Sans',sans-serif;
+  font-size:.9rem;line-height:1.4;
+  color:var(--c);
+  padding-left:1.2rem;
+  position:relative;
+}
+.includes-list li::before{
+  content:'';position:absolute;
+  left:0;top:.5rem;
+  width:5px;height:5px;
+  border-radius:50%;
+  background:var(--c);
+}
+
+/* ================================ */
+/* WELLFAIR PROGRAM                  */
+/* ================================ */
+.wellfair-section{
+  padding:2rem 1.5rem;
+  max-width:480px;margin:0 auto;
+  text-align:center;
+}
+.wellfair-badge{
+  display:inline-block;
+  font-family:'Space Mono',monospace;
+  font-size:.65rem;font-weight:700;
+  letter-spacing:.15em;text-transform:uppercase;
+  color:var(--g);
+  background:rgba(26,77,30,.15);
+  border:1px solid rgba(26,77,30,.2);
+  padding:.4rem .8rem;
+  border-radius:100px;
+  margin-bottom:.8rem;
+}
+.wellfair-text{
+  font-family:'General Sans',sans-serif;
+  font-size:.95rem;line-height:1.6;
+  color:#fff;
+}
+.wellfair-text strong{color:#fff}
+
+/* ================================ */
+/* LOGISTICS                         */
+/* ================================ */
+.logistics-section{
+  padding:2rem 1.5rem;
+  max-width:480px;margin:0 auto;
+}
+.logistics-grid{
+  display:flex;flex-direction:column;gap:1rem;
+}
+.logistics-card{
+  padding:1rem;
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:12px;
+  background:rgba(255,255,255,.02);
+}
+.logistics-label{
+  font-family:'Space Mono',monospace;
+  font-size:.65rem;font-weight:700;
+  letter-spacing:.15em;text-transform:uppercase;
+  color:#fff;
+  margin-bottom:.4rem;
+}
+.logistics-value{
+  font-family:'Cabinet Grotesk',sans-serif;
+  font-weight:800;font-size:1.15rem;
+  color:#fff;
+  line-height:1.3;
+}
+.logistics-note{
+  font-family:'General Sans',sans-serif;
+  font-size:.85rem;line-height:1.5;
+  color:#fff;
+  margin-top:.25rem;
+}
+
+/* ================================ */
+/* LODGING DETAILS (EXPANDABLE)      */
+/* ================================ */
+.lodging-details{
+  padding:0 1.5rem 2rem;
+  max-width:480px;margin:0 auto;
+}
+.lodging-accordion{
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:12px;
+  overflow:hidden;
+}
+.lodging-item{
+  border-bottom:1px solid rgba(255,255,255,.04);
+}
+.lodging-item:last-child{border-bottom:none}
+.lodging-toggle{
+  width:100%;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem 1.2rem;
+  background:none;border:none;
+  cursor:pointer;
+  font-family:'Cabinet Grotesk',sans-serif;
+  font-weight:800;font-size:1.05rem;
+  color:#fff;
+  text-align:left;
+}
+.lodging-toggle:hover{background:rgba(255,255,255,.02)}
+.lodging-arrow{
+  font-size:.7rem;
+  color:#fff;
+  transition:transform .3s var(--ease);
+}
+.lodging-item.open .lodging-arrow{
+  transform:rotate(180deg);
+}
+.lodging-body{
+  max-height:0;overflow:hidden;
+  transition:max-height .35s var(--ease);
+}
+.lodging-body-inner{
+  padding:0 1.2rem 1rem;
+}
+.lodging-body p{
+  font-family:'General Sans',sans-serif;
+  font-size:.9rem;line-height:1.6;
+  color:#fff;
+}
+.lodging-body p + p{margin-top:.5rem}
+.lodging-body .lodging-tag{
+  display:inline-block;
+  font-family:'Space Mono',monospace;
+  font-size:.55rem;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:var(--c);
+  background:rgba(245,240,224,.06);
+  padding:.2rem .5rem;
+  border-radius:4px;
+  margin-top:.4rem;
+}
+
+/* ================================ */
+/* FOOTER                            */
+/* ================================ */
+.footer{
+  padding:2rem 1.5rem 3rem;
+  text-align:center;
+}
+.footer-text{
+  font-family:'Space Mono',monospace;
+  font-size:.6rem;font-weight:400;
+  letter-spacing:.1em;
+  color:#fff;
+}
+.footer-link{
+  color:#fff;
+  text-decoration:none;
+}
+.footer-link:hover{color:var(--c)}
+
+/* ================================ */
+/* FLOATING CTA                      */
+/* ================================ */
+.float-cta{
+  position:fixed;bottom:max(20px, env(safe-area-inset-bottom, 20px));
+  left:50%;transform:translateX(-50%);
+  z-index:90;
+  opacity:0;
+  transition:opacity .4s var(--ease);
+}
+.float-cta.show{opacity:1}
+.float-cta-btn{
+  font-family:'Space Mono',monospace;
+  font-size:.75rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--g);background:var(--c);
+  padding:.8rem 1.8rem;border-radius:100px;
+  text-decoration:none;
+  display:flex;align-items:center;gap:.5rem;
+  box-shadow:0 4px 20px rgba(0,0,0,.5);
+  transition:background .2s;
+}
+.float-cta-btn:hover{background:#fff}
+
+/* ================================ */
+/* ANIMATIONS                        */
+/* ================================ */
+.fade-up{
+  opacity:0;transform:translateY(15px);
+  transition:all .6s var(--ease);
+}
+.fade-up.in{opacity:1;transform:translateY(0)}
+.fade-up.d1{transition-delay:.05s}
+.fade-up.d2{transition-delay:.1s}
+.fade-up.d3{transition-delay:.15s}
+.fade-up.d4{transition-delay:.2s}
+.fade-up.d5{transition-delay:.25s}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<!-- Header -->
+<div class="header fade-up">
+  <a href="/" class="header-back">&larr; Back</a>
+  <div class="header-title">Sound Squeeze 2.0</div>
+  <div class="header-sub">Application</div>
+</div>
+
+<div class="sec-divider"></div>
+
+<!-- How It Works -->
+<div class="apply-section">
+  <div class="sec-title-sm">How It Works</div>
+  <div class="sec-title fade-up">4 Simple Steps</div>
+  <div class="steps">
+    <div class="step fade-up d1">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <div class="step-title">Apply</div>
+        <div class="step-desc">Fill out the application below. Takes about 5 minutes.</div>
+      </div>
+    </div>
+    <div class="step fade-up d2">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <div class="step-title">Review</div>
+        <div class="step-desc">We review applications to ensure a great creative mix. You'll hear back within a few days.</div>
+      </div>
+    </div>
+    <div class="step fade-up d3">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <div class="step-title">Secure Your Spot</div>
+        <div class="step-desc">Once accepted, place a deposit to lock in your spot and lodging preference.</div>
+      </div>
+    </div>
+    <div class="step fade-up d4">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <div class="step-title">Prep + Arrive</div>
+        <div class="step-desc">We'll send everything you need to know before you arrive. Balance due March 22nd.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sec-divider"></div>
+
+<!-- Typeform Application -->
+<div class="apply-section" style="padding-bottom:0">
+  <div class="sec-title-sm">Application</div>
+  <div class="sec-title fade-up">Apply Now</div>
+</div>
+<div class="typeform-section">
+  <div class="typeform-wrap">
+    <iframe
+      id="typeform-embed"
+      src="https://form.typeform.com/to/sDVRBjFZ?typeform-medium=embed-snippet"
+      allow="camera; microphone; autoplay; encrypted-media;"
+      loading="lazy"
+    ></iframe>
+  </div>
+  <div class="typeform-or">
+    <span class="typeform-or-text">or open in <a href="https://form.typeform.com/to/sDVRBjFZ" target="_blank" rel="noopener">new tab</a></span>
+  </div>
+</div>
+
+<div class="sec-divider" style="margin-top:2rem"></div>
+
+<!-- Pricing Section -->
+<div class="pricing-section">
+  <div class="pricing-inner">
+    <div class="sec-title-sm" style="color:var(--c)">Lodging & Pricing</div>
+    <div class="sec-title fade-up" style="color:var(--c)">Choose Your Stay</div>
+
+    <div class="pricing-block fade-up">
+      <div class="pricing-block-name">Shared Lodging</div>
+      <div class="pricing-block-sub">'Pool House' & 'The Barn'</div>
+      <div class="pricing-line">
+        <span class="pricing-line-label">Twin bunk</span>
+        <span class="pricing-line-price">$400</span>
+      </div>
+      <div class="pricing-line">
+        <span class="pricing-line-label">Full bunk</span>
+        <span class="pricing-line-price">$450</span>
+      </div>
+      <div class="pricing-block-desc">Full & twin-sized bunks. Shared living space. Reservation is for bed size only — specific beds are first-come, first-serve.</div>
+    </div>
+
+    <div class="pricing-block fade-up">
+      <div class="pricing-block-name">Shared Cabins</div>
+      <div class="pricing-line">
+        <span class="pricing-line-label">Per individual</span>
+        <span class="pricing-line-price">$525</span>
+      </div>
+      <div class="pricing-block-desc">Shared cabin w/ two queen beds, shared master bath, living area, & back porch.</div>
+    </div>
+
+    <div class="pricing-block fade-up">
+      <div class="pricing-block-name">Private Cabins</div>
+      <div class="pricing-block-sub">Individual or Couple</div>
+      <div class="pricing-line">
+        <span class="pricing-line-label">Per individual</span>
+        <span class="pricing-line-price">$750</span>
+      </div>
+      <div class="pricing-line">
+        <span class="pricing-line-label">Per couple</span>
+        <span class="pricing-line-price">$1,300</span>
+      </div>
+      <div class="pricing-block-desc">Private cabin w/ queen bed, master bath, living area, & back porch.</div>
+      <div class="pricing-block-note">*"Couple": any 2 persons</div>
+    </div>
+
+    <div class="pricing-vehicle fade-up">
+      <div class="pricing-vehicle-title">Vehicle Sleeper</div>
+      <div class="pricing-vehicle-desc">Bringing your own van, camper, or vehicle? Let us know in the application — we can accommodate vehicle sleepers on the property.</div>
+    </div>
+
+    <div class="includes-box fade-up">
+      <div class="includes-title">All Tiers Include</div>
+      <ul class="includes-list">
+        <li>4 nights of lodging</li>
+        <li>Dinners + snacks</li>
+        <li>Recording + jam gear setup</li>
+        <li>Photo + video</li>
+        <li>Workshops + all experiences</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Lodging Details (Expandable) -->
+<div class="lodging-details">
+  <div class="sec-title-sm" style="margin-top:2rem">Details</div>
+  <div class="sec-title fade-up">Lodging Types</div>
+
+  <div class="lodging-accordion fade-up">
+
+    <div class="lodging-item">
+      <button class="lodging-toggle" onclick="toggleLodging(this)">
+        Private Cabins
+        <span class="lodging-arrow">&#9660;</span>
+      </button>
+      <div class="lodging-body">
+        <div class="lodging-body-inner">
+          <p>Two standalone cabins, each with a queen bed, private master bath, living area with couch, and a back porch overlooking the property.</p>
+          <p>Available as individual or couple (any 2 persons sharing). Couple rate is per-cabin, not per-person.</p>
+          <span class="lodging-tag">Most privacy</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="lodging-item">
+      <button class="lodging-toggle" onclick="toggleLodging(this)">
+        Shared Cabins
+        <span class="lodging-arrow">&#9660;</span>
+      </button>
+      <div class="lodging-body">
+        <div class="lodging-body-inner">
+          <p>Same cabin style as private — queen beds, master bath, living area, back porch. Shared with one other person.</p>
+          <p>Great balance of comfort and community. You'll be paired with another artist.</p>
+          <span class="lodging-tag">Best balance</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="lodging-item">
+      <button class="lodging-toggle" onclick="toggleLodging(this)">
+        Pool House & The Barn
+        <span class="lodging-arrow">&#9660;</span>
+      </button>
+      <div class="lodging-body">
+        <div class="lodging-body-inner">
+          <p>Communal-style lodging in two unique spaces on the property. Full and twin-sized bunks available.</p>
+          <p>Shared living space with other artists. Reservation is for bed size only — specific beds are first-come, first-serve at check-in.</p>
+          <span class="lodging-tag">Most social</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="lodging-item">
+      <button class="lodging-toggle" onclick="toggleLodging(this)">
+        Vehicle Sleeper
+        <span class="lodging-arrow">&#9660;</span>
+      </button>
+      <div class="lodging-body">
+        <div class="lodging-body-inner">
+          <p>Bringing your own van, camper, or vehicle? We have space on the property for vehicle sleepers.</p>
+          <p>Let us know in the application and we'll coordinate parking and access to facilities.</p>
+          <span class="lodging-tag">Bring your own</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="sec-divider"></div>
+
+<!-- WellFair Program -->
+<div class="wellfair-section fade-up">
+  <div class="wellfair-badge">WellFair&trade; Program</div>
+  <div class="wellfair-text">
+    Sound Squeeze uses a <strong>sliding scale pricing model</strong> in the application. If cost is a barrier, let us know — we want to make this accessible to artists committed to their craft.
+  </div>
+</div>
+
+<div class="sec-divider"></div>
+
+<!-- Logistics -->
+<div class="logistics-section">
+  <div class="sec-title-sm">Logistics</div>
+  <div class="sec-title fade-up">Need to Know</div>
+
+  <div class="logistics-grid">
+    <div class="logistics-card fade-up d1">
+      <div class="logistics-label">Check-in</div>
+      <div class="logistics-value">Sunday, March 29th</div>
+      <div class="logistics-note">5:30 — 7:30pm. Dinner to follow.</div>
+    </div>
+    <div class="logistics-card fade-up d2">
+      <div class="logistics-label">Check-out</div>
+      <div class="logistics-value">Wednesday, April 2nd</div>
+      <div class="logistics-note">Morning. Brunch and goodbyes.</div>
+    </div>
+    <div class="logistics-card fade-up d3">
+      <div class="logistics-label">Balance Due</div>
+      <div class="logistics-value">March 22nd</div>
+      <div class="logistics-note">Full balance due one week before the retreat.</div>
+    </div>
+    <div class="logistics-card fade-up d4">
+      <div class="logistics-label">Location</div>
+      <div class="logistics-value">Hill Country, TX</div>
+      <div class="logistics-note">24-acre property. Exact address shared upon acceptance.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <div class="footer-text">
+    Sound Squeeze is a <a href="https://swim.art" class="footer-link">Well.Made.Plays</a> production
+  </div>
+</div>
+
+<!-- Floating CTA (shows when scrolled past typeform) -->
+<div class="float-cta" id="floatCta">
+  <a class="float-cta-btn" href="#typeform-embed">Apply <span>&rarr;</span></a>
+</div>
+
+<script>
+// Fade-up on scroll
+const faders = document.querySelectorAll('.fade-up');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+faders.forEach(f => obs.observe(f));
+
+// Auto-trigger header fade
+setTimeout(() => {
+  document.querySelector('.header').classList.add('in');
+}, 100);
+
+// Lodging accordion
+function toggleLodging(btn) {
+  const item = btn.parentElement;
+  const body = item.querySelector('.lodging-body');
+  const isOpen = item.classList.contains('open');
+
+  // Close all
+  document.querySelectorAll('.lodging-item').forEach(li => {
+    li.classList.remove('open');
+    li.querySelector('.lodging-body').style.maxHeight = '0';
+  });
+
+  // Open clicked (if was closed)
+  if (!isOpen) {
+    item.classList.add('open');
+    body.style.maxHeight = body.scrollHeight + 'px';
+  }
+}
+
+// Floating CTA — show when scrolled past the typeform
+const typeformSection = document.querySelector('.typeform-section');
+const floatCta = document.getElementById('floatCta');
+const ctaObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    floatCta.classList.toggle('show', !e.isIntersecting);
+  });
+}, { threshold: 0 });
+ctaObs.observe(typeformSection);
+</script>
+</body>
+</html>
