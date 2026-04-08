@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sound Squeeze — Recap</title>
+<meta name="description" content="Sound Squeeze Recap — Photos, videos, music, and resources from the retreat.">
+<meta property="og:title" content="Sound Squeeze — Recap">
+<meta property="og:description" content="Photos, videos, music, and resources from the retreat.">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800,900&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --g:#1A4D1E;
+  --c:#F5F0E0;
+  --w:#fff;
+  --bk:#0a0a0a;
+  --ease:cubic-bezier(.4,0,.2,1);
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'General Sans',sans-serif;
+  background:var(--bk);
+  color:var(--w);
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+/* Film grain overlay */
+.grain{
+  position:fixed;inset:0;z-index:999;
+  pointer-events:none;
+  opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat:repeat;
+}
+
+/* Page wrapper */
+.page{
+  max-width:480px;
+  margin:0 auto;
+  padding:0 1.4rem;
+  padding-bottom:calc(4rem + env(safe-area-inset-bottom, 0px));
+}
+
+/* ================================ */
+/* HERO                              */
+/* ================================ */
+.hero{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  padding:4rem 0 3rem;
+}
+.hero-eyebrow{
+  font-family:'Space Mono',monospace;
+  font-size:.6rem;
+  font-weight:400;
+  letter-spacing:.25em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.4);
+  margin-bottom:1rem;
+}
+.hero-title{
+  font-family:'Cabinet Grotesk',sans-serif;
+  font-weight:900;
+  font-size:2.4rem;
+  letter-spacing:-.03em;
+  line-height:1;
+  color:var(--w);
+}
+.hero-title em{
+  font-family:'Instrument Serif',serif;
+  font-style:italic;
+  font-weight:400;
+  color:var(--c);
+}
+.hero-sub{
+  font-family:'General Sans',sans-serif;
+  font-size:.9rem;
+  color:rgba(255,255,255,.5);
+  margin-top:.8rem;
+  line-height:1.5;
+}
+.hero-date{
+  display:inline-block;
+  font-family:'Space Mono',monospace;
+  font-size:.65rem;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  color:var(--c);
+  border:1px solid rgba(245,240,224,.2);
+  border-radius:100px;
+  padding:.4rem 1rem;
+  margin-top:1.2rem;
+}
+
+/* ================================ */
+/* SECTION LABELS                    */
+/* ================================ */
+.sec-label{
+  font-family:'Space Mono',monospace;
+  font-size:.6rem;
+  font-weight:700;
+  letter-spacing:.25em;
+  text-transform:uppercase;
+  display:flex;
+  align-items:center;
+  gap:.7rem;
+  color:rgba(255,255,255,.35);
+  margin-bottom:1.4rem;
+}
+.sec-label::before,.sec-label::after{
+  content:'';flex:1;height:1px;
+  background:rgba(255,255,255,.1);
+}
+
+/* ================================ */
+/* SECTIONS                          */
+/* ================================ */
+.section{
+  padding:2.5rem 0;
+}
+.section + .section{
+  border-top:1px solid rgba(255,255,255,.06);
+}
+
+/* ================================ */
+/* CARDS                             */
+/* ================================ */
+.card{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;
+  padding:1.4rem;
+  transition:background .2s var(--ease);
+}
+.card:hover{
+  background:rgba(255,255,255,.06);
+}
+.card + .card{
+  margin-top:.8rem;
+}
+.card-label{
+  font-family:'Space Mono',monospace;
+  font-size:.55rem;
+  font-weight:700;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.3);
+  margin-bottom:.5rem;
+}
+.card-title{
+  font-family:'Cabinet Grotesk',sans-serif;
+  font-weight:800;
+  font-size:1.1rem;
+  letter-spacing:-.02em;
+  color:var(--w);
+}
+.card-desc{
+  font-family:'General Sans',sans-serif;
+  font-size:.8rem;
+  color:rgba(255,255,255,.45);
+  margin-top:.3rem;
+  line-height:1.5;
+}
+
+/* ================================ */
+/* LINK BUTTONS                      */
+/* ================================ */
+.link-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  font-family:'Space Mono',monospace;
+  font-size:.7rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:var(--g);
+  background:var(--c);
+  padding:.65rem 1.2rem;
+  border-radius:100px;
+  margin-top:1rem;
+  transition:all .2s var(--ease);
+}
+.link-btn:hover{
+  background:var(--w);
+}
+.link-btn svg{
+  width:14px;height:14px;
+  flex-shrink:0;
+}
+
+.link-btn--outline{
+  background:transparent;
+  color:var(--c);
+  border:1px solid rgba(245,240,224,.2);
+}
+.link-btn--outline:hover{
+  background:rgba(245,240,224,.08);
+}
+
+/* ================================ */
+/* YOUTUBE EMBED                     */
+/* ================================ */
+.video-wrap{
+  position:relative;
+  width:100%;
+  padding-bottom:56.25%;
+  border-radius:12px;
+  overflow:hidden;
+  background:#111;
+}
+.video-wrap iframe{
+  position:absolute;
+  top:0;left:0;
+  width:100%;height:100%;
+  border:0;
+}
+
+/* ================================ */
+/* UNTITLED EMBED                    */
+/* ================================ */
+.playlist-wrap{
+  border-radius:12px;
+  overflow:hidden;
+  background:#111;
+}
+.playlist-wrap iframe{
+  width:100%;
+  border:0;
+  display:block;
+}
+
+/* ================================ */
+/* GALLERY LINKS                     */
+/* ================================ */
+.gallery-grid{
+  display:flex;
+  flex-direction:column;
+  gap:.8rem;
+}
+.gallery-card{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;
+  padding:1.2rem 1.4rem;
+  text-decoration:none;
+  transition:background .2s var(--ease);
+}
+.gallery-card:hover{
+  background:rgba(255,255,255,.06);
+}
+.gallery-card-info{
+  display:flex;
+  flex-direction:column;
+  gap:.2rem;
+}
+.gallery-card-title{
+  font-family:'Cabinet Grotesk',sans-serif;
+  font-weight:800;
+  font-size:1rem;
+  letter-spacing:-.02em;
+  color:var(--w);
+}
+.gallery-card-sub{
+  font-family:'Space Mono',monospace;
+  font-size:.55rem;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.3);
+}
+.gallery-card-arrow{
+  color:rgba(255,255,255,.25);
+  font-size:1.2rem;
+  transition:transform .2s var(--ease), color .2s;
+}
+.gallery-card:hover .gallery-card-arrow{
+  color:var(--c);
+  transform:translateX(3px);
+}
+
+/* ================================ */
+/* FOOTER                           */
+/* ================================ */
+.footer{
+  text-align:center;
+  padding:2rem 0 1rem;
+  font-family:'Space Mono',monospace;
+  font-size:.55rem;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.2);
+}
+
+/* ================================ */
+/* ENTRANCE ANIMATIONS               */
+/* ================================ */
+.fade-up{
+  opacity:0;
+  transform:translateY(20px);
+  transition:opacity .6s var(--ease), transform .6s var(--ease);
+}
+.fade-up.in{
+  opacity:1;
+  transform:translateY(0);
+}
+.section:nth-child(2) .fade-up{transition-delay:.05s}
+.section:nth-child(3) .fade-up{transition-delay:.1s}
+
+/* ================================ */
+/* RESPONSIVE — LARGER SCREENS       */
+/* ================================ */
+@media(min-width:600px){
+  .page{max-width:560px;padding:0 2rem}
+  .hero-title{font-size:3rem}
+  .card{padding:1.8rem}
+}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-eyebrow fade-up">Sound Squeeze</div>
+    <h1 class="hero-title fade-up"><em>Recap</em></h1>
+    <p class="hero-sub fade-up">Everything from the retreat — photos, videos, music, and resources — all in one place.</p>
+    <div class="hero-date fade-up">Mar 29 – Apr 2, 2026</div>
+  </div>
+
+  <!-- PHOTOS -->
+  <div class="section">
+    <div class="sec-label fade-up">Photos</div>
+    <div class="card fade-up">
+      <div class="card-label">Google Photos</div>
+      <div class="card-title">Retreat Photo Album</div>
+      <div class="card-desc">All the photos from the week — sessions, jams, hangs, and everything in between.</div>
+      <a href="https://photos.app.goo.gl/pSJLjTpjbodPK9vB6" target="_blank" rel="noopener" class="link-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        View Album
+      </a>
+    </div>
+  </div>
+
+  <!-- RESOURCES -->
+  <div class="section">
+    <div class="sec-label fade-up">Resources</div>
+    <div class="card fade-up">
+      <div class="card-label">Spreadsheet</div>
+      <div class="card-title">Resource List #1</div>
+      <div class="card-desc">Tools, plugins, and references shared during the retreat.</div>
+      <a href="https://docs.google.com/spreadsheets/d/1OSuNucSVq99-90J7ZGxMVm0gkWOHw6S8TIg9OLORczE/edit?usp=drivesdk" target="_blank" rel="noopener" class="link-btn link-btn--outline">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Open Spreadsheet
+      </a>
+    </div>
+    <div class="card fade-up">
+      <div class="card-label">Spreadsheet</div>
+      <div class="card-title">Resource List #2</div>
+      <div class="card-desc">Additional resources and links from the crew.</div>
+      <a href="https://docs.google.com/spreadsheets/d/1ZueMfgrzpC3D1qrotNr6RMdLqzVcj4CJkItIwDvbupY/edit?usp=drivesdk" target="_blank" rel="noopener" class="link-btn link-btn--outline">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Open Spreadsheet
+      </a>
+    </div>
+  </div>
+
+  <!-- VIDEOS -->
+  <div class="section">
+    <div class="sec-label fade-up">Videos</div>
+    <div class="fade-up">
+      <div class="video-wrap">
+        <!-- Replace PLAYLIST_ID with your YouTube playlist ID -->
+        <iframe
+          src="https://www.youtube.com/embed/videoseries?list=PLU1nahRASKrPyJmz-hUYiD3j9mLLq2daI&rel=0&modestbranding=1"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+    <div class="card fade-up" style="margin-top:1rem">
+      <div class="card-label">Dropbox</div>
+      <div class="card-title">Download Videos</div>
+      <div class="card-desc">Want the original files? Download all the videos from Dropbox.</div>
+      <a href="https://www.dropbox.com/scl/fo/itpvg0qsobrt2jo4yvbaa/ABUngi7mQaCmR6oeuhM2WwY?rlkey=3gynckmnw8krqtovq2j8z4po1&st=4i9spv54&dl=0" target="_blank" rel="noopener" class="link-btn link-btn--outline">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download from Dropbox
+      </a>
+    </div>
+  </div>
+
+  <!-- MUSIC -->
+  <div class="section">
+    <div class="sec-label fade-up">Playlist</div>
+    <div class="fade-up">
+      <div class="playlist-wrap">
+        <iframe
+          src="https://untitled.stream/embed/sa0VQqAf0y8O"
+          width="100%"
+          height="344"
+          allowfullscreen
+          allow="picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- GALLERY -->
+  <div class="section">
+    <div class="sec-label fade-up">Gallery</div>
+    <div class="gallery-grid fade-up">
+      <a href="https://leahcreative.pixieset.com/soundsqueeze2/" target="_blank" rel="noopener" class="gallery-card">
+        <div class="gallery-card-info">
+          <div class="gallery-card-title">Sound Squeeze 2</div>
+          <div class="gallery-card-sub">Pixieset — Leah Creative</div>
+        </div>
+        <span class="gallery-card-arrow">&rarr;</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer">Sound Squeeze 2026</div>
+
+</div>
+
+<script>
+// Fade-in on scroll
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
