@@ -208,6 +208,42 @@ body{
 }
 
 /* ================================ */
+/* LEAH'S VIDEOS BUTTON              */
+/* ================================ */
+.leah-btn{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:100%;
+  margin-top:1rem;
+  padding:1rem 1.4rem;
+  background:var(--g);
+  border:1px solid rgba(245,240,224,.15);
+  border-radius:14px;
+  text-decoration:none;
+  transition:all .25s var(--ease);
+}
+.leah-btn:hover{
+  background:#1f5c24;
+  border-color:rgba(245,240,224,.3);
+}
+.leah-btn-text{
+  font-family:'Cabinet Grotesk',sans-serif;
+  font-weight:800;
+  font-size:1.05rem;
+  letter-spacing:-.01em;
+  color:var(--c);
+}
+.leah-btn svg{
+  width:20px;height:20px;
+  color:var(--c);
+  transition:transform .2s var(--ease);
+}
+.leah-btn:hover svg{
+  transform:translate(3px,-3px);
+}
+
+/* ================================ */
 /* VIDEO TABS                        */
 /* ================================ */
 .vid-tabs{
@@ -449,11 +485,11 @@ body{
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Download from Dropbox
         </a>
-        <a href="https://www.dropbox.com/scl/fo/a9dkxfg7dv2jr7joz19m0/ACoDbjUlS26Y6f33Y0g7nQI?rlkey=hsvmda6qni3vuo3u8lnrjpe3k&st=kk64dbfo&dl=0" target="_blank" rel="noopener" class="link-btn link-btn--outline">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Leah's Videos
-        </a>
       </div>
+      <a href="https://www.dropbox.com/scl/fo/a9dkxfg7dv2jr7joz19m0/ACoDbjUlS26Y6f33Y0g7nQI?rlkey=hsvmda6qni3vuo3u8lnrjpe3k&st=kk64dbfo&dl=0" target="_blank" rel="noopener" class="leah-btn">
+        <span class="leah-btn-text">Leah's Videos</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+      </a>
     </div>
   </div>
 
